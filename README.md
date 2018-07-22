@@ -1,4 +1,4 @@
-# COMP1521 Tutorial work repository
+# COMP2511 Tutorial work repository
 
 ## How to use this repository
 

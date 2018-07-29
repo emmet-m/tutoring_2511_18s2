@@ -1,13 +1,13 @@
-import java.util.Calendar;
+import java.time.LocalDate;
 
 public class Manager extends Employee {
 	
-	private Calendar hireDate;
+	private LocalDate hireDate;
 	
 	// 
 	// TODO: USE JAVADOC
 	//
-	public Manager(int salary, String name, Calendar hireDate) {
+	public Manager(int salary, String name, LocalDate hireDate) {
 		
 		// We already have salary and name defined in our 
 		// Employee class...

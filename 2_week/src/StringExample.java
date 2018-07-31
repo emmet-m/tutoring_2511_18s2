@@ -1,4 +1,3 @@
-
 /*
  * @author Aarthi N
  * An example to understand that Java Strings are immutable
@@ -6,6 +5,7 @@
 public class StringExample {
 	
 	public static final int BUFSIZ = 0;
+	public static final int BIGSIZE = 100000;
 	
 	public static void main(String[] args) {
 		String message = "It is pouring like cats and dogs outside";
@@ -21,7 +21,7 @@ public class StringExample {
 		 * The time complexity be?
 		 */
 		
-		for (int i=0; i<=100000; i++){
+		for (int i=0; i <= BIGSIZE; i++){
 			message = message + i + ",";
 		}
 		message = message + "]";

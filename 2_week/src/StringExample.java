@@ -12,7 +12,6 @@ public class StringExample {
 		message = message + "and the lightining struck [";
 
 		// This isn't allowed
-		// message[0] = 'j';
 		
 		/*
 		 * Consider how strings work in C.
@@ -21,10 +20,15 @@ public class StringExample {
 		 * The time complexity be?
 		 */
 		
+		StringBuilder s = new StringBuilder(1000000);
+		
 		for (int i=0; i <= BIGSIZE; i++){
-			message = message + i + ",";
+			//message = message + i + ",";
+			s.append(i).append(" ");
 		}
-		message = message + "]";
-		System.out.println(message);
+
+		//message = message + "]";
+
+		System.out.println(s.toString());
 	}
 }

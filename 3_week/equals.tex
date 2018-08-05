@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} % Advanced math typesetting
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {.} }
+\begin{document}
+\title{.equals() in Java}
+
+\noindent
+A .equals() method in Java must satisfy the following requirements: \\ \\
+
+\noindent
+\textit{Reflexivity:} for any $x$, 
+    \begin{Large}\begin{center} $x.equals(x) == true$ \end{center}\end{Large}
+\textit{Symmetry:}    for any $x,y$, 
+    \begin{Large}\begin{center} $y.equals(x)$ == $x.equals(y)$ \end{center}\end{Large}
+\textit{Transitivity:} for any $x,y,z$, 
+    \begin{Large}\begin{center}if $x.equals(y)$ and $y.equals(z)$ then $x.equals(z)$ \end{center}\end{Large}
+\textit{null:} for any $x \neq null$,
+    \begin{Large}\begin{center} $x.equals(null) == false$ \end{center}\end{Large}
+
+\end{document}

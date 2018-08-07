@@ -15,8 +15,20 @@ public class DataReader {
 	public int[] readData() {
 		
 		// TODO
+		ArrayList<Integer> data = new ArrayList();
 		
-		return null;
+		Scanner input = new Scanner(System.in);
+		
+		while (input.hasNextInt()) {
+			data.add(input.nextInt());
+		}
+		
+		int[] toRet = new int[data.size()];
+		
+		for (int i = 0; i < data.size(); i++)
+			toRet[i] = data.get(i).intValue();
+		
+		return toRet;
 	}
 	
 	public static void main(String[] args) {

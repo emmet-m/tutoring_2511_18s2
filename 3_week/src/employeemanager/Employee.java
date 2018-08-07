@@ -16,7 +16,15 @@ public class Employee {
 
 	@Override
 	public boolean equals(Object o) {
-		return false;
+		if (this == o) return true;
+
+		if (!this.getClass().equals(o.getClass())) return false;
+
+		Employee e = (Employee) o;
+
+		if (!this.name.equals(e.name)) return false;
+		if (this.salary != e.salary) return false;
+		return true;
 	}
 	
 	// What if I want to construct an employee a different way?

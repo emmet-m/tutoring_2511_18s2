@@ -13,17 +13,14 @@ public class Point {
 		this.y = y;
 	}
 	
-	/*
-	 *  This is an in-correct implementation of equals() method
-	 *  This method does not override the equals() method in Object
-	 *  The equals() method in the Object class takes in a paramter of type Object
-	 *  This is a very common mistake made in the implementation of equals()
-	 */
 	
 	// What happens if I uncomment this?
-	//@Override
-	public boolean equals(Point obj) {
-		if ((this.x == obj.x) && (this.y == obj.y)) {
+	@Override
+	public boolean equals(Object obj) {
+		if (super.equals(obj)) return true;
+		if (!obj.getClass().equals(this.getClass())) return false;
+		Point p = (Point) obj;
+		if ((this.x == p.x) && (this.y == p.y)) {
 			return true;
 		}
 		return false;

@@ -6,31 +6,12 @@ public class Manager extends Employee {
 	
 	private LocalDate hireDate;
 	
-	// 
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	// TODO: USE JAVADOC
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
+	/**
+	 * A manager class.
+	 * @param salary
+	 * @param name
+	 * @param hireDate
+	 */
 	public Manager(int salary, String name, LocalDate hireDate) {
 		
 		super(salary, name);
@@ -40,7 +21,10 @@ public class Manager extends Employee {
 	
 	@Override
 	public boolean equals(Object o) {
-		return false;
+		if (!super.equals(o)) return false;
+		
+		Manager m = (Manager) o;
+		return this.hireDate.equals(m.hireDate);
 	}
 	
 	@Override

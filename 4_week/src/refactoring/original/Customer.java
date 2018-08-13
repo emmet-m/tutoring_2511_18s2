@@ -31,6 +31,15 @@ public class Customer {
 			double thisAmount = 0;
 			int priceCode = r.getMovie().getPriceCode();
 
+			/*
+			 * The law of demeter:
+			 * We are reaching into the rental class and then 
+			 * grabbing it's associated movie...
+			 * 
+			 * Over coupled! We should refactor.
+			 * 
+			 */
+
 			switch (priceCode) {
 				case Movie.REGULAR:
 					thisAmount += 2;

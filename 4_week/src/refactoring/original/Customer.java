@@ -34,27 +34,13 @@ public class Customer {
 			/*
 			 * The law of demeter:
 			 * We are reaching into the rental class and then 
-			 * grabbing it's associated movie...
+			 * grabbing its associated movie...
 			 * 
 			 * Over coupled! We should refactor.
 			 * 
 			 */
 
-			switch (priceCode) {
-				case Movie.REGULAR:
-					thisAmount += 2;
-					if (r.getDaysRented() > 2)
-						thisAmount += (r.getDaysRented() - 2) * 1.5;
-				break;
-				case Movie.NEW_RELEASE:
-					thisAmount += r.getDaysRented() * 3;
-				break;
-				case Movie.CHILDRENS:
-					thisAmount += 1.5;
-					if (r.getDaysRented() > 3)
-						thisAmount += (r.getDaysRented() - 3) * 1.5;
-				break;
-			}
+			thisAmount = r.getPrice();
 			
 			//show figures for this rental
 			result += "\t" + r.getMovie().getTitle() + "\t" + 	String.valueOf(thisAmount) + "\n";

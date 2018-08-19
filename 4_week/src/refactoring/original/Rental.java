@@ -14,7 +14,6 @@ public class Rental {
 	
 	public int getPrice() {
 		
-		
 		int thisAmount = 0;
 		int priceCode = movie.getPriceCode();
 		switch (priceCode) {

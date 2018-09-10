@@ -8,9 +8,11 @@ public interface ArithmeticExpression {
 	public int value();
 	
 	/* 
-	 * Removing these adds type safety... But makes the subclasses less uniform!
-	 * This also means constructed expressions are constant! 
-	 * We no longer have a way to remove them once they are cast to an ArithmeticExpression
+	 * Removing these adds type safety... (A Constant will NEVER implement any of these operations)
+	 * 
+	 * ... But makes the subclasses less uniform!
+	 * This also means constructed expressions are immutable (cannot be changed after construction)! 
+	 * We no longer have a way to remove/update them once they are cast to an ArithmeticExpression.
 	 */
 
 	// public void setLeftChild();

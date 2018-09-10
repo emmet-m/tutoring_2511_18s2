@@ -7,12 +7,14 @@ public class Operator implements ArithmeticExpression {
 	// TODO TODO TODO TODO TODO TODO
 	
 	public Operator(char op) {
-		this.operator = op;
-
 	}
 
+	/**
+	 * @pre True (only constructed Operator's are valid)
+	 * @post the value of the collapsed expression
+	 */
 	public int value() {
-		throw new UnsupportedOperationException("value method in Operator uninplemented!");
+		throw new UnsupportedOperationException("Value() not implemented in Operator");
 	}
 
 }

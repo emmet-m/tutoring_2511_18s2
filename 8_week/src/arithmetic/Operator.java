@@ -4,9 +4,13 @@ public class Operator implements ArithmeticExpression {
 
 	private final char operator;
 	// Left and right nodes??? 
-	// TODO TODO TODO TODO TODO TODO
+	private final ArithmeticExpression left;
+	private final ArithmeticExpression right;
 	
-	public Operator(char op) {
+	public Operator(char op, ArithmeticExpression l, ArithmeticExpression r) {
+		this.left  = l;
+		this.right = r;
+		this.operator = op;
 	}
 
 	/**
@@ -14,7 +18,19 @@ public class Operator implements ArithmeticExpression {
 	 * @post the value of the collapsed expression
 	 */
 	public int value() {
-		throw new UnsupportedOperationException("Value() not implemented in Operator");
+		
+		switch (this.operator) {
+		case '+':
+			return this.left.value() + this.right.value();
+		case '*':
+			return this.left.value() * this.right.value();
+		case '-':
+			return this.left.value() - this.right.value();
+		case '/':
+			return this.left.value() / this.right.value();
+		default:
+			throw new UnsupportedOperationException("Unsupported operation.");
+		}
 	}
 
 }

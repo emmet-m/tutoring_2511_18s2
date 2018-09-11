@@ -26,7 +26,9 @@ class TestArithmeticExpression {
 	
 	@Test
 	void testEvenMoreComplex() {
-		ArithmeticExpression t1 = new Operator('-', new Constant(2), new Constant(1));
+		ArithmeticExpression t1 = new Operator('-',
+				  new Operator('+', new Constant(1), new Constant(1))
+				, new Constant(1));
 		assertEquals(1, t1.value());
 	}
 

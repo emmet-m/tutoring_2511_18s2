@@ -9,6 +9,6 @@ public class Constant implements ArithmeticExpression {
 	}
 	
 	public int value() {
-		throw new UnsupportedOperationException("value method in Constant uninplemented!");
+		return this.val;
 	}
 }

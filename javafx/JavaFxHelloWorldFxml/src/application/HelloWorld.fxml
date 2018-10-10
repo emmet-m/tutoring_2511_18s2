@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="321.0" layoutY="165.0" text="Hello, World! (in FXML)">
+         <font>
+            <Font name="Fira Mono" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="myButton" layoutX="374.0" layoutY="76.0" mnemonicParsing="false" onAction="#myButtonClicked" prefHeight="49.0" prefWidth="388.0" text="Testing!" />
+      <Pane layoutX="121.0" layoutY="233.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button layoutX="31.0" layoutY="14.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

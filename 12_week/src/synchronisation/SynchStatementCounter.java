@@ -23,7 +23,7 @@ public class SynchStatementCounter {
 		}
 	} 
 	
-	public synchronized void showValue(String msg) {
+	public void showValue(String msg) {
 		synchronized(slock) {
 			int c = counter;
 			System.out.println(msg + "says: 'My c is: " + c + "'");

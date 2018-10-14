@@ -17,7 +17,7 @@ public class StatementSyncrhonisation implements Runnable {
 	public void run() {
 		// Runs a thread
 		
-		for (int i = 0; i < SCALE*SCALE; ++i) {
+		for (int i = 0; i < SCALE; ++i) {
 			m.increment();
 			m.showValue(this.myName);
 		}

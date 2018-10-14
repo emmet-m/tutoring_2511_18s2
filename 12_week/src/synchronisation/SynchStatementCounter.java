@@ -5,11 +5,12 @@ public class SynchStatementCounter {
 	Object ilock; // Dummy object to act as a lock for incrementing
 	Object slock; // Dummy object to act as a lock for printing
 
+	private int counter;
+
 	public SynchStatementCounter() {
 		this.ilock = new Object(); 
 		this.slock = new Object();
 	}
-	private int counter;
 
 	/**
 	 * With the 'synchronized' keyword, this method

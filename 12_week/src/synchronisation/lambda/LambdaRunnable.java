@@ -1,4 +1,4 @@
-package synchronisation;
+package synchronisation.lambda;
 
 public class LambdaRunnable {
 

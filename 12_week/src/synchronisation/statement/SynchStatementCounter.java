@@ -1,4 +1,4 @@
-package synchronisation;
+package synchronisation.statement;
 
 public class SynchStatementCounter {
 	

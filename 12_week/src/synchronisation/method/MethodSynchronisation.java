@@ -1,4 +1,4 @@
-package synchronisation;
+package synchronisation.method;
 
 public class MethodSynchronisation implements Runnable {
 	

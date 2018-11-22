@@ -6,10 +6,10 @@ public class Address {
 	private final String street;
 	private final String city;
 	private final String country;
-	private final PostCode postcode;
+	private final String postcode;
 	
 	public Address(String no, String st, String city, 
-                   PostCode pCode, String country) {
+                   String pCode, String country) {
 		this.number = no;
 		this.street = st;
 		this.city = city;
@@ -19,14 +19,14 @@ public class Address {
 	public String getCity() {
 		return city;
 	}
-	public PostCode getPostcode() {
+	public String getPostcode() {
 		return postcode;
 	}
 	public String getCountry() {
 		return country;
 	}
 	String getAddressSummary() {
-		return getCity() + "," + postcode.getPostcode();
+		return getCity() + "," + this.getPostcode();
 	}
 	
 }

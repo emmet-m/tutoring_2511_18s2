@@ -18,4 +18,9 @@ public class Customer {
 	public Address getAddress() {
 		return address;
 	}	
+	
+	public String summarise() {
+		return getFirstName() + getLastName() + 
+				getTitle() + address.summarise();
+	}
 }

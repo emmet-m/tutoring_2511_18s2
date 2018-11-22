@@ -17,5 +17,9 @@ public class Address {
 		this.postCode = postCode;
 	}
 	
+	public String summarise() {
+		return this.getCity() + this.getPostCode();
+	}
+	
 
 }
